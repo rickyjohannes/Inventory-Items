@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 use PDF;
 use Twilio\Rest\Client;
 
-
 class RequesterController extends Controller
 {
     public function index()
@@ -100,7 +99,6 @@ class RequesterController extends Controller
 
         session(['id_requester' => $requester->id_requester]);
         return redirect()->route('trx.index');
-        
     }
 
     public function store(Request $request)
@@ -131,7 +129,6 @@ class RequesterController extends Controller
             $produk->update();
         }
 */
-
         $telepon = '+6281362222160';
         $this->whatsappNotification($telepon);
         return redirect()->route('trx.selesai');
